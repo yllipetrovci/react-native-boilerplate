@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import MenuHeader from '../components/menu-header';
 import ListProducts from '../components/list-products';
 
