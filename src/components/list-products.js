@@ -3,21 +3,26 @@ import { View, Text, StyleSheet, FlatList } from 'react-native';
 import ProductCard from './product-card';
 
 const ListProducts = ({ title, data }) => {
+
+    const onPress = (id) => {
+        console.log({ id });
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>{title}</Text>
                 <Text>View all</Text>
             </View>
-            <View>
+            <View style={styles.listProducts}>
                 <FlatList
                     horizontal={true}
                     data={data}
                     showsHorizontalScrollIndicator={false}
                     renderItem={({ item }) => (
-                        <ProductCard item={item} onPress={() => { onPress(item) }} />
+                        <ProductCard item={item} onPress={() => { onPress(item.id) }} />
                     )}
-                    keyExtractor={(item) => item.toString()}
+                    keyExtractor={(item) => item.title.toString()}
                 />
             </View>
         </View>
@@ -38,6 +43,6 @@ const styles = StyleSheet.create({
         color: 'green'
     },
     listProducts: {
-
+        borderWidth:1,
     }
 });
