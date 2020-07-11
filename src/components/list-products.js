@@ -37,7 +37,10 @@ const styles = StyleSheet.create({
     },
     headerVw: {
         borderWidth: 1,
-        borderColor: 'red'
+        borderColor: 'red',
+        flexDirection:'row',
+        justifyContent:'space-between',
+        marginHorizontal:10
     },
     headerTitleTxt: {
         color: 'green'
