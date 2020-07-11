@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
+import ProductCard from './product-card';
 
-const ListProducts = ({ title }) => {
+const ListProducts = ({ title, data }) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -11,16 +12,10 @@ const ListProducts = ({ title }) => {
             <View>
                 <FlatList
                     horizontal={true}
-                    data={[1, 2, 3, 4]}
+                    data={data}
                     showsHorizontalScrollIndicator={false}
                     renderItem={({ item }) => (
-                        <View style={{
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            borderWidth:1,
-                        }}>
-                            <Text onPress={() => onPress(item.id)}>{item}</Text>
-                        </View>
+                        <ProductCard item={item} onPress={() => { onPress(item) }} />
                     )}
                     keyExtractor={(item) => item.toString()}
                 />
@@ -41,5 +36,8 @@ const styles = StyleSheet.create({
     },
     headerTitle: {
         color: 'green'
+    },
+    listProducts: {
+
     }
 });
