@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import MenuHeader from '../components/menu-header';
 import ListProducts from '../components/list-products';
+import images from '../assets/index';
 
 const HomeScreen = () => {
     const menuHeaderData = [
@@ -12,18 +13,18 @@ const HomeScreen = () => {
     ];
 
     const weeklyProductsData = [
-        { id: 1, price: 49.99, title: 'Women Shoes', img: '' },
-        { id: 2, price: 14.99, title: 'Peony Bouqet', img: '' },
-        { id: 3, price: 23.99, title: 'Blank Books', img: '' },
-        { id: 4, price: 3.99, title: 'Tennis Ball', img: '' },
-        { id: 5, price: 1.99, title: 'Pencils', img: '' },
-        { id: 6, price: 99.99, title: 'Converse', img: '' },
+        { id: 1, price: 49.99, title: 'Women Shoes', img: images.femaleShoes },
+        { id: 2, price: 14.99, title: 'Peony Bouqet', img: images.note },
+        { id: 3, price: 23.99, title: 'Blank Books', img: images.note },
+        { id: 4, price: 3.99, title: 'Tennis Ball', img: images.tennisBall },
+        { id: 5, price: 1.99, title: 'Pencils', img: images.pencils },
+        { id: 6, price: 99.99, title: 'Converse', img: images.converseShoes },
     ];
 
     const mostViewdData = [
-        { id: 1, price: 3.99, title: 'Tennis Ball', img: '' },
-        { id: 2, price: 1.99, title: 'Pencils', img: '' },
-        { id: 3, price: 99.99, title: 'Converse', img: '' },
+        { id: 4, price: 3.99, title: 'Tennis Ball', img: images.tennisBall },
+        { id: 5, price: 1.99, title: 'Pencils', img: images.pencils },
+        { id: 6, price: 99.99, title: 'Converse', img: images.converseShoes },
     ]
 
     return (
