@@ -32,16 +32,16 @@ const ListProducts = ({ title, data }) => {
 export default ListProducts;
 
 const styles = StyleSheet.create({
-    container: {
-        borderWidth: 1
-    },
+    container: {},
     headerVw: {
-        borderWidth: 1,
-        borderColor: 'red',
+        borderTopWidth: 1,
+        borderTopColor: '#EDEDED',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginHorizontal: 10
+        marginHorizontal: 10,
+        marginBottom: 10,
+        paddingTop:30
     },
     headerTitleTxt: {
         color: '#2E2F34',
@@ -53,6 +53,6 @@ const styles = StyleSheet.create({
         color: '#6E6C91'
     },
     listProductsVw: {
-        borderWidth: 1,
+        backgroundColor: '#F7F7F7'
     }
 });
