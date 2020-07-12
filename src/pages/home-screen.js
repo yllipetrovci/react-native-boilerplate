@@ -4,6 +4,13 @@ import MenuHeader from '../components/menu-header';
 import ListProducts from '../components/list-products';
 
 const HomeScreen = () => {
+    const menuHeaderData = [
+        { id: 1, icon: '', name: 'Real Estate', bgColor: '#FFB37B' },
+        { id: 2, icon: '', name: 'Jobs', bgColor: '#E18EFF' },
+        { id: 3, icon: '', name: 'Technology', bgColor: '#5ADFFF' },
+        { id: 4, icon: '', name: 'More', bgColor: '#FF9AC5' },
+    ];
+
     const weeklyProductsData = [
         { id: 1, price: 49.99, title: 'Women Shoes', img: '' },
         { id: 2, price: 14.99, title: 'Peony Bouqet', img: '' },
@@ -21,7 +28,7 @@ const HomeScreen = () => {
 
     return (
         <View style={styles.container}>
-            <MenuHeader />
+            <MenuHeader title='Categories' data={menuHeaderData} />
             <ListProducts title='Weekly Products' data={weeklyProductsData} />
             <ListProducts title='Most Viewed' data={mostViewdData} />
         </View>
@@ -33,6 +40,6 @@ export default HomeScreen;
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#fff',
-        height:'100%'
+        height: '100%'
     }
 })
