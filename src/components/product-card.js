@@ -8,8 +8,10 @@ const ProductCard = ({ item, onPress }) => {
     return (
         <TouchableOpacity onPress={onPress} style={styles.container}>
             <View style={styles.imageVw}><Text>IMG</Text></View>
-            <Text style={styles.titleTxt}>{title}</Text>
-            <Text style={styles.priceTxt}>$ {price}</Text>
+            <View style={{height:'30%', flexDirection:'column', marginTop:10,marginHorizontal:5,marginBottom:5}}>
+                <Text style={styles.titleTxt}>{title}</Text>
+                <Text style={styles.priceTxt}>$ {price}</Text>
+            </View>
         </TouchableOpacity>
     );
 };
@@ -21,15 +23,15 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#CAD8E8',
         borderRadius: 10,
-        width: 150,
-        height: 200,
+        width: 130,
+        height: 170,
         margin: 10,
         backgroundColor: '#fff'
     },
     imageVw: {
         borderBottomWidth: 1,
         borderColor: '#F7F7F7',
-        height: '60%'
+        height: '70%'
     },
     titleTxt: {
         fontSize: 13,
