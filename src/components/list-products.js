@@ -12,7 +12,7 @@ const ListProducts = ({ title, data }) => {
         <View style={styles.container}>
             <View style={styles.headerVw}>
                 <Text style={styles.headerTitleTxt}>{title}</Text>
-                <Text>View all</Text>
+                <Text style={styles.viewAllTxt}>View all</Text>
             </View>
             <View style={styles.listProductsVw}>
                 <FlatList
@@ -38,14 +38,21 @@ const styles = StyleSheet.create({
     headerVw: {
         borderWidth: 1,
         borderColor: 'red',
-        flexDirection:'row',
-        justifyContent:'space-between',
-        marginHorizontal:10
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginHorizontal: 10
     },
     headerTitleTxt: {
-        color: 'green'
+        color: '#2E2F34',
+        fontWeight: 'bold',
+        fontSize: 23
+    },
+    viewAllTxt: {
+        fontSize: 16,
+        color: '#6E6C91'
     },
     listProductsVw: {
-        borderWidth:1,
+        borderWidth: 1,
     }
 });
