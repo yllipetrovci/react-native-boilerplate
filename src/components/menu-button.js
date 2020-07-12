@@ -19,15 +19,14 @@ export default MenuButton;
 
 const styles = StyleSheet.create({
     container: {
-        borderWidth: 1,
         justifyContent: 'center',
         alignItems: 'center',
         height: '100%',
-        width: 102
+        width: 102,
     },
     imageVw: {
-        width: 65,
-        height: 65,
+        width: 70,
+        height: 70,
         borderRadius: 50
     },
     nameTxt:{
