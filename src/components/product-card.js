@@ -1,14 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const ProductCard = ({ item, onPress }) => {
     const { title, price, img } = item;
 
     return (
         <TouchableOpacity onPress={onPress} style={styles.container}>
-            <View style={styles.imageVw}><Text>IMG</Text></View>
-            <View style={{height:'30%', flexDirection:'column', marginTop:10,marginHorizontal:5,marginBottom:5}}>
+            <View style={{justifyContent:'center', alignItems:'center'}}>
+                <Image resizeMode='cover' style={styles.imageVw} source={img} />
+            </View>
+            <View style={{ height: '30%', flexDirection: 'column', marginTop: 10, marginHorizontal: 5, marginBottom: 5 }}>
                 <Text style={styles.titleTxt}>{title}</Text>
                 <Text style={styles.priceTxt}>$ {price}</Text>
             </View>
@@ -31,7 +32,8 @@ const styles = StyleSheet.create({
     imageVw: {
         borderBottomWidth: 1,
         borderColor: '#F7F7F7',
-        height: '70%'
+        height: '70%',
+        transform: [{ scale: 0.95 }]
     },
     titleTxt: {
         fontSize: 13,
