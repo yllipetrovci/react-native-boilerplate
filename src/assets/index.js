@@ -2,7 +2,7 @@ const images = {
     tennisBall: require('./tennis-ball.png'),
     converseShoes: require('./converse-shoes.png'),
     femaleShoes: require('./female-shoes.png'),
-    pencils: require('./pencilspng'),
+    pencils: require('./pencils.png'),
     note: require('./note.png'),
 };
 
