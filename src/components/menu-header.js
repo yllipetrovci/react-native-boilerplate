@@ -32,24 +32,23 @@ export default MenuHeader;
 
 const styles = StyleSheet.create({
     container: {
-        borderWidth: 1
+        marginBottom: 21
     },
     headerVw: {
-        borderWidth: 1,
         borderColor: 'red',
-        flexDirection:'row',
-        justifyContent:'flex-start',
-        marginHorizontal:10
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        marginHorizontal: 10,
     },
     headerTitleTxt: {
-        color: 'green'
+        color: '#222329',
+        fontSize: 26,
+        fontWeight: 'bold',
+        marginVertical: 10
     },
     listProductsVw: {
-        borderWidth:1,
-        height:100,
-        flexDirection:'row',
-        marginHorizontal:10
-        // flexDirection:'column',
-        // justifyContent:'center',
+        height: 110,
+        flexDirection: 'row',
+        marginHorizontal: 10
     }
 });
